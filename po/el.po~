@@ -1,0 +1,58 @@
+# translation of el.po to Greek
+# Wlan module (e17), Greek translation
+# This file is put in the public domain.
+# ragecryx <ragecryx@yahoo.gr>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-28 16:32+0800\n"
+"PO-Revision-Date: 2008-11-11 10:12+0200\n"
+"Last-Translator: \n"
+"Language-Team: Greek <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../src/e_mod_config.c:44
+msgid "Wlan Configuration"
+msgstr "Ρύθμιση Wlan"
+
+#: ../src/e_mod_config.c:117
+msgid "General Settings"
+msgstr "Γενικές Ρυθμίσεις"
+
+#: ../src/e_mod_config.c:119
+msgid "Always Show Text"
+msgstr "Εμφάνιση Κειμένου Πάντα"
+
+#: ../src/e_mod_config.c:121
+msgid "Show Text On Mouse Over"
+msgstr "Εμφάνιση Κειμένου όταν είναι πάνω το Ποντίκι"
+
+#: ../src/e_mod_config.c:124
+msgid "Show Text As Percent"
+msgstr "Εμφάνιση Κειμένου ως Ποσοστό"
+
+#: ../src/e_mod_config.c:128
+msgid "Check Interval:"
+msgstr "Χρονικό Διάστημα Ελέγχου:"
+
+#: ../src/e_mod_config.c:131
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f δευτερόλεπτα"
+
+#: ../src/e_mod_config.c:138
+msgid "Device Settings"
+msgstr "Ρυθμίσεις Συσκευής"
+
+#: ../src/e_mod_main.c:107
+msgid "Wlan"
+msgstr "Wlan"
+
+#: ../src/e_mod_main.c:165
+msgid "Configuration"
+msgstr "Ρύθμιση"

@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Marc Furtià  i Puig\\\n"
+"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
+"POT-Creation-Date: 2014-05-24 09:18+0200\n"
+"PO-Revision-Date: 2014-05-24 08:30+0000\n"
+"Last-Translator: marcfp <Unknown>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-05-25 05:42+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
+"Language: ca\n"
+"X-Poedit-Bookmarks: -1,-1,1139,-1,-1,-1,-1,-1,-1,-1\n"
+
+#: src/e_mod_config.c:38
+msgid "Wlan Settings"
+msgstr "Preferències Xarxa Sense Fils"
+
+#: src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Preferències Generals"
+
+#: src/e_mod_config.c:103
+msgid "Always Show Text"
+msgstr "Sempre Mostra Text"
+
+#: src/e_mod_config.c:106
+msgid "Show Text On Mouse Over"
+msgstr "Mostra text Quan Ratolí damunt"
+
+#: src/e_mod_config.c:109
+msgid "Show Text As Percent"
+msgstr "Mostra Text Com Tan Per Cent"
+
+#: src/e_mod_config.c:113
+msgid "Check Interval:"
+msgstr "Interval Comprovació:"
+
+#: src/e_mod_config.c:116
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f segons"
+
+#: src/e_mod_config.c:123
+msgid "Device Settings"
+msgstr "Preferències Dispositiu"
+
+#: src/e_mod_main.c:98
+msgid "Wlan"
+msgstr "Xarxa Sense Fils"
+
+#: src/e_mod_main.c:135
+msgid "Settings"
+msgstr "Preferències"
+
+#~ msgid "Wlan Configuration"
+#~ msgstr "WLAN-Konfiguration"
+
+#~ msgid "Configuration"
+#~ msgstr "Konfiguration"

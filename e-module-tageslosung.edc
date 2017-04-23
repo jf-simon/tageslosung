@@ -1,0 +1,390 @@
+images {
+   image: "module_icon.png" COMP;
+   image: "module_icon1.png" COMP;
+   image: "module_icon_world_white.png" COMP;
+   image: "module_icon_world_black.png" COMP;
+}
+
+
+styles
+{
+   style {
+      name: "textblock_style_white";
+            //base: "font=Sans font_size=10 color=#ffffff wrap=word align=left";
+            base: "font="Sans" font_size=10 text_class=entry color=#FFFFFF valign=0.5 ellipsis=1.0 wrap=word";
+      tag:  "Losungstext" "+align=left";
+      tag:  "br" "\n";
+      tag:  "Losungsvers" "+font_size=9 align=right";
+      tag:  "Lehrtextvers" "+font_size=9 align=right";
+      tag:  "b" "+ font_weight=Bold";
+   }
+   style {
+      name: "textblock_style_black";
+            base: "font=Sans font_size=10 color=#000000 wrap=word align=right valign=top ";
+      tag:  "br" "\n";
+      tag:  "Losungsvers" "+ font_size=9 - align=right";
+
+      tag:  "Lehrtextvers" "+ font_size=9 align=right";
+      tag:  "b" "+ font_weight=Bold";
+            //tag:  "tab" "\t";
+   }
+}
+
+collections {
+   group {
+      name : "icon";
+      max  : 48 48;
+      parts {
+         part {
+            name         : "image";
+            type         : IMAGE;
+            mouse_events : 0;
+            description {
+               state         : "default" 0.00;
+               visible       : 1;
+               aspect        : 0.0 1.0;
+               rel1.relative : 0.0 0.0;
+               rel1.offset   : 0 0;
+               rel2.relative : 1.0 1.0;
+               rel2.offset   : -1 -1;
+               image.normal  : "module_icon1.png";
+            }
+         }
+      }
+   }
+   group {
+      name : "modules/tageslosung/main";
+      min  : 4 4;
+        //max  : 128 128;
+      script {
+         public farbe;
+                //public textfarbe;
+         public message(Msg_Type:type, id, ...) {
+            if ((type == MSG_FLOAT) && (id == 1)) {
+               custom_state(PART:"losung", "default", 0.0);
+               set_state_val(PART:"losung", STATE_TEXT_STYLE, "textblock_style_black");
+               set_state_val(PART:"losung", STATE_TEXT, "0");
+               set_state_val(PART:"losung", STATE_VISIBLE, 1);
+               set_state(PART:"losung", "visible", 0.0);
+
+//                         set_text(PART:"losung", "1");
+            }
+            if ((type == MSG_FLOAT) && (id == 2)) {
+               custom_state(PART:"losung", "default", 0.0);
+               set_state_val(PART:"losung", STATE_TEXT_STYLE, "textblock_style_white");
+            }
+         }
+
+      }
+      parts {
+         part {
+            name : "fade_clip";
+            type : RECT;
+            description {
+               state         : "default" 0.0;
+               color         : 255 255 255 255;
+               rel1.relative : 0.0 0.0;
+               rel1.offset   : 0 0;
+               rel2.relative : 1.0 1.0;
+               rel2.offset   : -1 -1;
+            }
+         }       
+         part {
+            name    : "tageslosung";
+            type    : IMAGE;
+            mouse_events: 1;
+            clip_to : "fade_clip";
+            description {
+               state             : "default" 0.0;
+               color             : 255 255 255 192;
+               visible           : 1;       
+               aspect            : 1.0 1.0;
+               aspect_preference : BOTH;
+               align             : 0.0 0.0;
+               rel1.relative     : 0.0 0.0;
+               rel1.offset       : 5.0 0;
+               rel2.relative     : 1.0 1.0;
+               rel2.offset       : -1 -1;
+               image.normal      : "module_icon.png";
+            }
+            description {
+               state             : "visible" 0.0;
+               inherit           : "default" 0.0;
+               visible           : 1;
+               image.normal      : "module_icon1.png";
+            }
+            description {
+               state             : "world_black" 0.0;
+               inherit           : "default" 0.0;
+               visible           : 1;
+               image.normal      : "module_icon_world_black.png";
+            }
+
+            description {
+               state             : "world_white" 0.0;
+               inherit           : "default" 0.0;
+               visible           : 1;
+               image.normal      : "module_icon_world_white.png";
+            }
+         }
+         part {
+            name : "klick";
+            type : RECT;
+            description {
+               state         : "default" 0.0;
+               visible: 1;
+               color: 255 255 255 0;
+               rel1.to       : "tageslosung";
+               rel1.relative     : 0.0 0.0;
+               //rel1.offset: 85 77;
+               rel2.to       : "tageslosung";
+               rel2.relative     : 1.0 1.0;
+               //rel2.offset: -1 -16;
+            }   
+            description {
+               state         : "visible" 0.0;
+               inherit	     : "default";
+               color         : 255 255 255 25;
+            }
+         }
+         part {
+            name    : "losung";
+            type    : TEXTBLOCK;
+            clip_to : "fade_clip";
+//              effect  : SOFT_SHADOW;
+            description {
+               state          : "default" 0.0;
+               color          : 255 255 255 0;
+               color3         : 0 0 0 0;
+               visible        : 0;                    
+               rel1.to        : "tageslosung";
+               rel1.offset    : 0 0;
+               rel1.relative  : 1.0 0.0;
+               rel2.relative  : 1.0 1.0;
+                    //rel2.offset    : 0 -15;
+               text.style     : "textblock_style_white";
+               text.text      : "";
+            }
+            description {
+               state       : "visible" 0.0;
+               inherit     : "default" 0.0;
+               visible     : 1;
+               color       : 255 255 255 255;
+            }
+         }
+ /*          part {
+                name : "test1";
+                type : RECT;
+                description {
+                    state         : "default" 0.0;
+                    color         : 255 255 255 64;               
+                    rel1.to        : "tageslosung";
+                    rel1.offset    : 10 0;
+                    rel1.relative  : 1.0 0.0;
+                    rel2.relative  : 1.0 1.0;
+                    rel2.offset    : 0 -5;
+                }
+            }       
+           part {
+                name : "test";
+                type : RECT;
+                description {
+                    state         : "default" 0.0;
+                    color         : 255 255 255 128;               
+                    rel1.to        : "tageslosung";
+                    rel1.offset    : 10 0;
+                    rel1.relative  : 1.0 0.0;
+                    rel2.relative  : 1.0 1.0;
+                    rel2.offset    : 0 -15;
+                }
+            }       
+*/
+         part {
+            name    : "losungsvers";
+            type    : TEXTBLOCK;
+            clip_to : "fade_clip";
+//              effect  : SOFT_SHADOW;
+            description {
+               state          : "default" 0.0;
+               color          : 255 255 255 0;
+               color3         : 0 0 0 0;
+               visible        : 1;                    
+               rel1.to        : "losung";
+               rel1.offset    : 0 -20;
+               rel1.relative  : 0.0 1.0;
+               rel2.relative  : 1.0 1.0;
+               rel2.offset    : -20 0;
+               text.style     : "textblock_style_white";
+               text.text      : "";
+            }
+            description {
+               state       : "visible" 0.0;
+               inherit     : "default" 0.0;
+               visible     : 1;
+               color       : 255 255 255 255;
+            }
+         }
+         part {
+            name    : "lehrtext";
+            type    : TEXTBLOCK;
+            clip_to : "fade_clip";
+//                effect  : SOFT_SHADOW;
+            description {
+               state          : "default" 0.0;
+               color: 255 255 255 0;
+               color3         : 0 0 0 0;
+               visible        : 0;                    
+               rel1.to        : "tageslosung";
+               rel1.offset    : 0 0;
+               rel1.relative  : 1.0 0.0;
+               rel2.relative  : 1.0 1.0;
+               text {
+                  text       : "";
+                  style      : "textblock_style_white";
+                        //min        : 1 1;
+               }
+            }
+            description {
+               state       : "visible" 0.0;
+               inherit     : "default" 0.0;
+               visible     : 1;
+               color       : 255 255 255 255;
+            }
+
+         }
+         part {
+            name    : "lehrtextvers";
+            type    : TEXTBLOCK;
+            clip_to : "fade_clip";
+//              effect  : SOFT_SHADOW;
+            description {
+               state          : "default" 0.0;
+               color          : 255 255 255 0;
+               color3         : 0 0 0 0;
+               visible        : 1;                    
+               rel1.to        : "lehrtext";
+               rel1.offset    : 0 -20;
+               rel1.relative  : 0.0 1.0;
+               rel2.relative  : 1.0 1.0;
+               rel2.offset    : -20 0;
+               text.style     : "textblock_style_black";
+               text.text      : "";
+            }
+            description {
+               state       : "visible" 0.0;
+               inherit     : "default" 0.0;
+               visible     : 1;
+               color       : 255 255 255 255;
+            }
+         }
+      }
+      programs {
+         program {
+            name       : "go_white";
+            signal     : "white";
+            source     : "";
+            action     : STATE_SET "visible" 0.0;
+                //transition : SINUSOIDAL 4.0;
+            target     : "tageslosung";
+         }
+         program {
+            name       : "go_black";
+            signal     : "black";
+            source     : "";
+            action     : STATE_SET "default" 0.0;
+                //transition : SINUSOIDAL 4.0;
+            target     : "tageslosung";
+         }
+         program {
+            name       : "go_active_losung";
+            signal     : "active_losung";
+            source     : "";
+            action     : STATE_SET "visible" 0.0;
+            transition : SINUSOIDAL 4.0;
+            target     : "losung";
+            target     : "losungsvers";
+         }
+         program {
+            name       : "go_active_lehrtext";
+            signal     : "active_lehrtext";
+            source     : "";
+            action     : STATE_SET "visible" 0.0;
+            transition : SINUSOIDAL 4.0;
+            target     : "lehrtext";
+            target     : "lehrtextvers";
+         }
+         program {
+            name       : "go_passive_losung";
+            signal     : "passive_losung";
+            source     : "";
+            action     : STATE_SET "default" 0.0;
+            transition : SINUSOIDAL 4.0;
+            target     : "losung";
+            target     : "losungsvers";
+         }
+         program {
+            name       : "go_passive_lehrtext";
+            signal     : "passive_lehrtext";
+            source     : "";
+            action     : STATE_SET "default" 0.0;
+            transition : SINUSOIDAL 4.0;
+            target     : "lehrtext";
+            target     : "lehrtextvers";
+         }
+         program {
+            signal: "mouse,in";
+            source: "klick";
+               //action: STATE_SET "world" 0.0;
+               //target: "tageslosung";
+            transition: LINEAR 0.1;                
+            script {
+               new st[31];
+               new Float:vl;
+               get_state(PART:"tageslosung", st, 30, vl);
+
+               if (strcmp(st, "default"))
+               {
+                  set_int(farbe, 1);
+                  set_state(PART:"tageslosung", "world_white", 0.0);
+               }
+               if (strcmp(st, "visible"))
+               {
+                  set_int(farbe, 0);
+                  set_state(PART:"tageslosung", "world_black", 0.0);
+               }
+
+            }
+         }
+         program {
+               // what triggers this program:
+            signal: "mouse,out";
+            source: "klick";
+               //action: STATE_SET "default" 0.0;
+               //target: "tageslosung";
+            transition: LINEAR 0.1;
+            script {
+                    //new Float:farbe_neu = get_float(farbe);
+               new farbe_neu = get_int(farbe);
+                    //new Float:speedx = get_float(ballspeedx);
+               get_int(farbe);
+               if (farbe_neu == 0)
+               {
+                  set_state(PART:"tageslosung", "default", 0.0);
+               }
+               if (farbe_neu == 1)
+               {
+                  set_state(PART:"tageslosung", "visible", 0.0);
+               }
+            }
+         }
+         program {
+            name, "button_click";
+            signal, "mouse,down,1";
+            source, "klick";
+            action: SIGNAL_EMIT "mouse,over" "part_right";
+            target, "klick";
+                //after,  "do_me";
+         }
+      }
+   }
+}

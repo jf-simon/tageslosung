@@ -1,0 +1,66 @@
+# Turkish translation for enlightenment
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
+"POT-Creation-Date: 2014-05-24 09:18+0200\n"
+"PO-Revision-Date: 2014-05-24 08:41+0000\n"
+"Last-Translator: Mustafa Yılmaz <apshalasha@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-05-25 05:42+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
+"Language: tr\n"
+
+#: src/e_mod_config.c:38
+msgid "Wlan Settings"
+msgstr "Wlan Ayarları"
+
+#: src/e_mod_config.c:100
+msgid "General Settings"
+msgstr "Genel Ayarlar"
+
+#: src/e_mod_config.c:103
+msgid "Always Show Text"
+msgstr "Metni Hep Göster"
+
+#: src/e_mod_config.c:106
+msgid "Show Text On Mouse Over"
+msgstr "Metni Fare Üzerine Gelince Göster"
+
+#: src/e_mod_config.c:109
+msgid "Show Text As Percent"
+msgstr "Metni Yüzde Olarak Göster"
+
+#: src/e_mod_config.c:113
+msgid "Check Interval:"
+msgstr "Kontrol Sıklığı:"
+
+#: src/e_mod_config.c:116
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f saniye"
+
+#: src/e_mod_config.c:123
+msgid "Device Settings"
+msgstr "Aygıt Ayarları"
+
+#: src/e_mod_main.c:98
+msgid "Wlan"
+msgstr "Wlan"
+
+#: src/e_mod_main.c:135
+msgid "Settings"
+msgstr "Ayarlar"
+
+#~ msgid "Wlan Configuration"
+#~ msgstr "Wlan Yapılandırması"
+
+#~ msgid "Configuration"
+#~ msgstr "Yapılandırma"

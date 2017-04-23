@@ -1,0 +1,67 @@
+# Swedish translation of Wlan module for E17.
+# This file is put in the public domain.
+# Anders Trobäck <enlightenment@troback.com>, 2006.
+# Daniel Nylander <yeager@ubuntu.com>, 2009.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Wlan module for E17 N/A\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-08-28 16:32+0800\n"
+"PO-Revision-Date: 2009-01-11 15:47+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
+"Language-Team: Swedish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/e_mod_config.c:44
+msgid "Wlan Configuration"
+msgstr "Wlan-konfiguration"
+
+#: ../src/e_mod_config.c:117
+msgid "General Settings"
+msgstr "Allmänna inställningar"
+
+#: ../src/e_mod_config.c:119
+msgid "Always Show Text"
+msgstr "Visa alltid text"
+
+#: ../src/e_mod_config.c:121
+msgid "Show Text On Mouse Over"
+msgstr "Visa text när musen är över"
+
+#: ../src/e_mod_config.c:124
+msgid "Show Text As Percent"
+msgstr "Visa text som procent"
+
+#: ../src/e_mod_config.c:128
+msgid "Check Interval:"
+msgstr "Kontrollintervall:"
+
+#: ../src/e_mod_config.c:131
+#, c-format
+msgid "%1.0f seconds"
+msgstr "%1.0f sekunder"
+
+#: ../src/e_mod_config.c:138
+msgid "Device Settings"
+msgstr "Enhetsinställningar"
+
+#: ../src/e_mod_main.c:107
+msgid "Wlan"
+msgstr "Wlan"
+
+#: ../src/e_mod_main.c:165
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#~ msgid "Show Graph"
+#~ msgstr "Visa graf"
+
+#~ msgid "Enlightenment Wlan Monitor Module"
+#~ msgstr "Enlightenment Wlanövervakningsmodul"
+
+#~ msgid "This module is used to monitor a wlan device."
+#~ msgstr "Denna modul används för att övervaka en Wlan enhet."
